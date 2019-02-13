@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://guxtav.github.io/updated-web-app",
-  "test": "CI=true react-scripts test --env=jsdom",
-  "test:coverage": "npm test -- --coverage",
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
