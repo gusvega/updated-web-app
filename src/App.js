@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>{{yo.soy.chingon()}}}</code>
+            <code>yo.soy.chingon()</code>
           </p>
           <a
             className="App-link"
