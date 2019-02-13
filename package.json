@@ -2,13 +2,15 @@
   "name": "updatedwebapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://guxtav.github.io/updated-web-app",
+  "homepage": "https://guxtav.github.io/updated-web-app/build",
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
