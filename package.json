@@ -2,7 +2,7 @@
   "name": "updatedwebapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://guxtav.github.io/updated-web-app/build",
+  "homepage": "https://guxtav.github.io/updated-web-app",
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
