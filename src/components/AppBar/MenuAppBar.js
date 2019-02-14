@@ -6,6 +6,15 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import Dialog from "@material-ui/core/Dialog";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@material-ui/core/ListItem";
+import List from "@material-ui/core/List";
+import Divider from "@material-ui/core/Divider";
+import CloseIcon from "@material-ui/icons/Close";
+import Button from "@material-ui/core/Button";
+
+import Slide from "@material-ui/core/Slide";
 
 const styles = {
   root: {
@@ -19,6 +28,10 @@ const styles = {
     marginRight: 20
   }
 };
+
+function Transition(props) {
+  return <Slide direction="up" {...props} />;
+}
 
 class MenuAppBar extends React.Component {
   state = {
@@ -34,8 +47,12 @@ class MenuAppBar extends React.Component {
     this.setState({ anchorEl: event.currentTarget });
   };
 
+  handleClickOpen = () => {
+    this.setState({ open: true });
+  };
+
   handleClose = () => {
-    this.setState({ anchorEl: null });
+    this.setState({ open: false });
   };
 
   render() {
@@ -60,7 +77,7 @@ class MenuAppBar extends React.Component {
                 <IconButton
                   aria-owns={open ? "menu-appbar" : undefined}
                   aria-haspopup="true"
-                  onClick={this.handleMenu}
+                  onClick={this.handleClickOpen}
                   color="inherit"
                 >
                   <MenuIcon />
@@ -69,6 +86,25 @@ class MenuAppBar extends React.Component {
             )}
           </Toolbar>
         </AppBar>
+
+        <Dialog
+          fullScreen
+          open={this.state.open}
+          onClose={this.handleClose}
+          TransitionComponent={Transition}
+        >
+          <AppBar className={classes.appBar}>
+            <Toolbar>
+              <IconButton
+                color="inherit"
+                onClick={this.handleClose}
+                aria-label="Close"
+              >
+                <CloseIcon />
+              </IconButton>
+            </Toolbar>
+          </AppBar>
+        </Dialog>
       </div>
     );
   }
