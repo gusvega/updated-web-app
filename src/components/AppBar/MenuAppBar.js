@@ -53,7 +53,7 @@ class MenuAppBar extends React.Component {
               aria-label="Menu"
             />
             <Typography variant="h6" color="inherit" className={classes.grow}>
-              Photoss
+              GUS
             </Typography>
             {auth && (
               <div>
