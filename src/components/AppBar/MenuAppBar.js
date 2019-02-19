@@ -1,14 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Dialog from "@material-ui/core/Dialog";
-import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
+import "./MenuAppBar.css";
 
 const styles = {
   root: {
@@ -24,7 +18,7 @@ const styles = {
 };
 
 function Transition(props) {
-  return <Slide direction="down" {...props} />;
+  return <Slide direction="left" {...props} />;
 }
 
 class MenuAppBar extends React.Component {
@@ -55,51 +49,33 @@ class MenuAppBar extends React.Component {
     const open = Boolean(anchorEl);
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            />
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-              GUSTAVO
-            </Typography>
-            {auth && (
-              <div>
-                <IconButton
-                  aria-owns={open ? "menu-appbar" : undefined}
-                  aria-haspopup="true"
-                  onClick={this.handleClickOpen}
-                  color="inherit"
-                >
-                  <MenuIcon />
-                </IconButton>
-              </div>
-            )}
-          </Toolbar>
-        </AppBar>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
 
-        <Dialog
-          fullScreen
-          open={this.state.open}
-          onClose={this.handleClose}
-          TransitionComponent={Transition}
-        >
-          <AppBar className={classes.appBar}>
-            <Toolbar>
-              <IconButton
-                color="inherit"
-                onClick={this.handleClose}
-                aria-label="Close"
-              >
-                <CloseIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
-        </Dialog>
-      </div>
+          <span />
+          <span />
+          <span />
+
+          <ul id="menu">
+            <a href="#">
+              <li>Me</li>
+            </a>
+            <a href="#">
+              <li>Photography</li>
+            </a>
+            <a href="#">
+              <li>Film</li>
+            </a>
+            <a href="#">
+              <li>Travel</li>
+            </a>
+            <a href="#">
+              <li>Gus Development and E-Marketing</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }
