@@ -44,10 +44,6 @@ class MenuAppBar extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
-    const { auth, anchorEl } = this.state;
-    const open = Boolean(anchorEl);
-
     return (
       <nav role="navigation">
         <div id="menuToggle">
@@ -58,19 +54,19 @@ class MenuAppBar extends React.Component {
           <span />
 
           <ul id="menu">
-            <a href="#">
+            <a href="https://www.google.com">
               <li>Me</li>
             </a>
-            <a href="#">
+            <a href="https://www.google.com">
               <li>Photography</li>
             </a>
-            <a href="#">
+            <a href="https://www.google.com">
               <li>Film</li>
             </a>
-            <a href="#">
+            <a href="https://www.google.com">
               <li>Travel</li>
             </a>
-            <a href="#">
+            <a href="https://www.google.com">
               <li>Gus Development and E-Marketing</li>
             </a>
           </ul>
