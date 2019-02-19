@@ -17,10 +17,6 @@ const styles = {
   }
 };
 
-function Transition(props) {
-  return <Slide direction="left" {...props} />;
-}
-
 class MenuAppBar extends React.Component {
   state = {
     auth: true,
