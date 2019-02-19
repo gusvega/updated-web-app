@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Slide from "@material-ui/core/Slide";
 import "./MenuAppBar.css";
 
 const styles = {
