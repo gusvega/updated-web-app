@@ -49,21 +49,23 @@ class MenuAppBar extends React.Component {
           <span />
 
           <ul id="menu">
-            <a href="https://www.google.com">
-              <li>Me</li>
-            </a>
-            <a href="https://www.google.com">
-              <li>Photography</li>
-            </a>
-            <a href="https://www.google.com">
-              <li>Film</li>
-            </a>
-            <a href="https://www.google.com">
-              <li>Travel</li>
-            </a>
-            <a href="https://www.google.com">
-              <li>Gus Development and E-Marketing</li>
-            </a>
+            <div id="menu-container">
+              <a href="https://www.google.com">
+                <li>Me</li>
+              </a>
+              <a href="https://www.google.com">
+                <li>Photography</li>
+              </a>
+              <a href="https://www.google.com">
+                <li>Film</li>
+              </a>
+              <a href="https://www.google.com">
+                <li>Travel</li>
+              </a>
+              <a href="https://www.google.com">
+                <li>GUX DevMark</li>
+              </a>
+            </div>
           </ul>
         </div>
       </nav>
