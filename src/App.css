@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.copy_right{
+  font-size: 10px;
+}
+
+.body{
+  background-color: aliceblue;
+}
+
+.footer{
+  background-color: brown;
+}
